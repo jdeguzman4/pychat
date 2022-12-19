@@ -1,4 +1,4 @@
-#PyChat
+# PyChat
 
 A simple chat client interfacing with OPENAI's completion API.
 
