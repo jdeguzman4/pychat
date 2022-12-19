@@ -13,11 +13,16 @@ def main():
     print("PyChat v0.1")
     query = input("Input: ")
 
-    completion = openai.Completion.create(engine="text-davinci-003", prompt=query, max_tokens=4000)
+    if query != "":
 
-    output = completion.choices[0].text
+        completion = openai.Completion.create(engine="text-davinci-003", prompt=query, max_tokens=4000)
 
-    print("Output: {}".format(output))
+        output = completion.choices[0].text
+
+        print("Output: {}".format(output))
+
+    else:
+        print("An input is required")
 
 if __name__ == "__main__":
     main()
